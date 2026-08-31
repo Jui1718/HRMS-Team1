@@ -1,0 +1,1029 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"
+    CodeBehind="Site.Master.cs"
+    Inherits="ProjectDemo.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=0" />
+
+    <meta name="description"
+        content="HR Management System" />
+
+    <meta name="keywords"
+        content="HR, Employee, Payroll, Attendance, Management" />
+
+    <meta name="author"
+        content="ProjectDemo" />
+
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent"
+            runat="server">
+            HR Management System
+        </asp:ContentPlaceHolder>
+    </title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon"
+        type="image/x-icon"
+        href="assets/img/favicon.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css"
+        rel="stylesheet" />
+
+    <!-- Tabler Icons -->
+    <link href="assets/plugins/tabler-icons/tabler-icons.css"
+        rel="stylesheet" />
+
+    <!-- Feather CSS -->
+    <link href="assets/plugins/icons/feather/feather.css"
+        rel="stylesheet" />
+
+    <!-- Main CSS -->
+    <link href="assets/css/style.css"
+        rel="stylesheet" />
+
+    <!-- Page Specific Head Content -->
+    <asp:ContentPlaceHolder ID="HeadContent"
+        runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body>
+
+<form id="form1" runat="server">
+
+    <!-- ========================================= -->
+    <!-- MAIN WRAPPER -->
+    <!-- ========================================= -->
+
+    <div class="main-wrapper">
+
+        <!-- ========================================= -->
+        <!-- SIDEBAR -->
+        <!-- ========================================= -->
+
+        <div class="stacked-sidebar"
+     id="stacked-sidebar"
+     style="display:block !important;">
+
+    <div class="sidebar sidebar-stacked"
+         style="display:flex !important;">
+
+
+                <!-- LEFT MINI SIDEBAR -->
+                <div class="stacked-mini">
+
+                    <a href="Dashboard.aspx"
+                        class="logo-small">
+
+                        <img src="assets/img/logo-small.svg"
+                            alt="Logo" />
+
+                    </a>
+
+                    <div class="sidebar-left slimscroll">
+
+                        <div class="d-flex align-items-center flex-column">
+
+                            <!-- Notification -->
+                            <div class="mb-1 notification-item">
+
+                                <a href="#"
+                                    class="btn btn-menubar position-relative">
+
+                                    <i class="ti ti-bell"></i>
+
+                                    <span class="notification-status-dot"></span>
+
+                                </a>
+
+                            </div>
+
+                            <!-- Fullscreen -->
+                            <div class="mb-1">
+
+                                <a href="#"
+                                    class="btn btn-menubar btnFullscreen">
+
+                                    <i class="ti ti-maximize"></i>
+
+                                </a>
+
+                            </div>
+
+                            <!-- Calendar -->
+                            <div class="mb-1">
+
+                                <a href="Events.aspx"
+                                    class="btn btn-menubar">
+
+                                    <i class="ti ti-calendar-event"></i>
+
+                                </a>
+
+                            </div>
+
+                            <!-- Chat -->
+                            <div class="mb-1">
+
+                                <a href="#"
+                                    class="btn btn-menubar position-relative">
+
+                                    <i class="ti ti-brand-hipchat"></i>
+
+                                    <span class="badge bg-info rounded-pill
+                                        d-flex align-items-center
+                                        justify-content-center header-badge">
+                                        5
+                                    </span>
+
+                                </a>
+
+                            </div>
+
+                            <!-- Mail -->
+                            <div class="mb-1">
+
+                                <a href="#"
+                                    class="btn btn-menubar">
+
+                                    <i class="ti ti-mail"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ========================================= -->
+                <!-- RIGHT SIDEBAR -->
+                <!-- ========================================= -->
+
+                <div class="sidebar-right d-flex
+                    justify-content-between flex-column">
+
+                    <div class="sidebar-scroll">
+
+                        <h6 class="mb-3">
+                            MAIN MENU
+                        </h6>
+
+
+                        <!-- PROFILE -->
+
+                        <div class="sidebar-profile text-center
+                            rounded bg-light p-3 mb-4">
+
+                            <div class="avatar avatar-lg online mb-3">
+
+                                <img src="assets/img/profiles/avatar-02.jpg"
+                                    alt="Profile"
+                                    class="img-fluid rounded-circle" />
+
+                            </div>
+
+                            <h6 class="fs-12 fw-normal mb-1">
+                                Adrian Herman
+                            </h6>
+
+                            <p class="fs-10">
+                                System Admin
+                            </p>
+
+                        </div>
+
+
+                        <!-- ========================================= -->
+                        <!-- MENU -->
+                        <!-- ========================================= -->
+
+                        <div class="stack-menu">
+
+                            <div class="nav flex-column
+                                align-items-center nav-pills">
+
+                                <div class="row g-2">
+
+
+                                    <!-- DASHBOARD -->
+
+                                    <div class="col-6">
+
+                                        <a href="Dashboard.aspx"
+                                            class="nav-link"
+                                            title="Dashboard">
+
+                                            <span>
+                                                <i class="ti ti-smart-home"></i>
+                                            </span>
+
+                                            <p>Dashboard</p>
+
+                                        </a>
+
+                                    </div>
+
+
+                                    <!-- HOT -->
+
+                                    <div class="col-6">
+
+                                        <a href="javascript:void(0);"
+                                            class="nav-link"
+                                            title="Hot"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#menu-hot">
+
+                                            <span>
+                                                <i class="ti ti-flame"></i>
+                                            </span>
+
+                                            <p>Hot</p>
+
+                                        </a>
+
+                                    </div>
+
+
+                                    <!-- EMPLOYEES -->
+
+                                    <div class="col-6">
+
+                                        <a href="javascript:void(0);"
+                                            class="nav-link"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#menu-employees">
+
+                                            <span>
+                                                <i class="ti ti-users"></i>
+                                            </span>
+
+                                            <p>Employees</p>
+
+                                        </a>
+
+                                    </div>
+
+
+                                    <!-- EVENTS -->
+
+                                    <div class="col-6">
+
+                                        <a href="javascript:void(0);"
+                                            class="nav-link"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#menu-events">
+
+                                            <span>
+                                                <i class="ti ti-calendar-event"></i>
+                                            </span>
+
+                                            <p>Events</p>
+
+                                        </a>
+
+                                    </div>
+
+
+                                    <!-- TRAINING -->
+
+                                    <div class="col-6">
+
+                                        <a href="javascript:void(0);"
+                                            class="nav-link"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#menu-training">
+
+                                            <span>
+                                                <i class="ti ti-school"></i>
+                                            </span>
+
+                                            <p>Training</p>
+
+                                        </a>
+
+                                    </div>
+
+
+                                    <!-- PERFORMANCE -->
+
+                                    <div class="col-6">
+
+                                        <a href="javascript:void(0);"
+                                            class="nav-link"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#menu-performance">
+
+                                            <span>
+                                                <i class="ti ti-chart-line"></i>
+                                            </span>
+
+                                            <p>Performance &amp; Goal</p>
+
+                                        </a>
+
+                                    </div>
+
+
+                                    <!-- MASTER DOCUMENTS -->
+
+                                    <div class="col-6">
+
+                                        <a href="javascript:void(0);"
+                                            class="nav-link"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#menu-master-documents">
+
+                                            <span>
+                                                <i class="ti ti-file-settings"></i>
+                                            </span>
+
+                                            <p>Master Documents</p>
+
+                                        </a>
+
+                                    </div>
+
+
+                                    <!-- PROJECTS -->
+
+                                    <div class="col-6">
+
+                                        <a href="javascript:void(0);"
+                                            class="nav-link"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#menu-projects">
+
+                                            <span>
+                                                <i class="ti ti-folder"></i>
+                                            </span>
+
+                                            <p>Projects</p>
+
+                                        </a>
+
+                                    </div>
+
+
+                                    <!-- REPORTS -->
+
+                                    <div class="col-6">
+
+                                        <a href="javascript:void(0);"
+                                            class="nav-link"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#menu-reports">
+
+                                            <span>
+                                                <i class="ti ti-report"></i>
+                                            </span>
+
+                                            <p>Reports</p>
+
+                                        </a>
+
+                                    </div>
+
+
+                                    <!-- ATTENDANCE -->
+
+                                    <div class="col-6">
+
+                                        <a href="javascript:void(0);"
+                                            class="nav-link"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#menu-attendance">
+
+                                            <span>
+                                                <i class="ti ti-calendar-check"></i>
+                                            </span>
+
+                                            <p>Attendance</p>
+
+                                        </a>
+
+                                    </div>
+
+
+                                    <!-- PAYROLL -->
+
+                                    <div class="col-6">
+
+                                        <a href="javascript:void(0);"
+                                            class="nav-link"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#menu-payroll">
+
+                                            <span>
+                                                <i class="ti ti-cash"></i>
+                                            </span>
+
+                                            <p>Payroll</p>
+
+                                        </a>
+
+                                    </div>
+
+
+                                    <!-- PROMOTION -->
+
+                                    <div class="col-6">
+
+                                        <a href="Promotion.aspx"
+                                            class="nav-link">
+
+                                            <span>
+                                                <i class="ti ti-arrow-up"></i>
+                                            </span>
+
+                                            <p>Promotion</p>
+
+                                        </a>
+
+                                    </div>
+
+
+                                    <!-- RESIGNATION -->
+
+                                    <div class="col-6">
+
+                                        <a href="Resignation.aspx"
+                                            class="nav-link">
+
+                                            <span>
+                                                <i class="ti ti-user-minus"></i>
+                                            </span>
+
+                                            <p>Resignation</p>
+
+                                        </a>
+
+                                    </div>
+
+
+                                    <!-- TERMINATION -->
+
+                                    <div class="col-6">
+
+                                        <a href="Termination.aspx"
+                                            class="nav-link">
+
+                                            <span>
+                                                <i class="ti ti-user-x"></i>
+                                            </span>
+
+                                            <p>Termination</p>
+
+                                        </a>
+
+                                    </div>
+
+
+                                    <!-- HELP -->
+
+                                    <div class="col-6">
+
+                                        <a href="javascript:void(0);"
+                                            class="nav-link"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#menu-help">
+
+                                            <span>
+                                                <i class="ti ti-help-circle"></i>
+                                            </span>
+
+                                            <p>Help &amp; Supports</p>
+
+                                        </a>
+
+                                    </div>
+
+
+                                    <!-- TICKETS -->
+
+                                    <div class="col-6">
+
+                                        <a href="javascript:void(0);"
+                                            class="nav-link"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#menu-tickets">
+
+                                            <span>
+                                                <i class="ti ti-ticket"></i>
+                                            </span>
+
+                                            <p>Tickets</p>
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- ========================================= -->
+                            <!-- SUB MENUS -->
+                            <!-- ========================================= -->
+
+                            <div class="tab-content">
+
+
+                                <!-- HOT -->
+
+                                <div class="tab-pane fade"
+                                    id="menu-hot">
+
+                                    <ul class="stack-submenu">
+
+                                        <li>
+                                            <a href="AdminDashboard.aspx">
+                                                Admin Dashboard
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="OrganisationList.aspx">
+                                                Organisation List
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                                <!-- EMPLOYEES -->
+
+                                <div class="tab-pane fade"
+                                    id="menu-employees">
+
+                                    <ul class="stack-submenu">
+
+                                        <li>
+                                            <a href="AddDepartment.aspx">
+                                                Add Department
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="RoleController.aspx">
+                                                Add Role
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="AddDesignation.aspx">
+                                                Add Designation
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="EmployeeList.aspx">
+                                                Employee List
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="EmployeeGrid.aspx">
+                                                Employee Grid
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="EmployeeDetails.aspx">
+                                                Employee Details
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                                <!-- EVENTS -->
+
+                                <div class="tab-pane fade"
+                                    id="menu-events">
+
+                                    <ul class="stack-submenu">
+
+                                        <li>
+                                            <a href="AddEvent.aspx">
+                                                Add Event
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="AddMasterEvent.aspx">
+                                                Add Master Event
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="EventList.aspx">
+                                                Event List
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                                <!-- TRAINING -->
+
+                                <div class="tab-pane fade"
+                                    id="menu-training">
+
+                                    <ul class="stack-submenu">
+
+                                        <li>
+                                            <a href="TrainingList.aspx">
+                                                Training List
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="Trainers.aspx">
+                                                Trainers
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="TrainingType.aspx">
+                                                Training Type
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                                <!-- PERFORMANCE -->
+
+                                <div class="tab-pane fade"
+                                    id="menu-performance">
+
+                                    <ul class="stack-submenu">
+
+                                        <li>
+                                            <a href="Performance.aspx">
+                                                Performance
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="Goal.aspx">
+                                                Goal
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                                <!-- MASTER DOCUMENTS -->
+
+                                <div class="tab-pane fade"
+                                    id="menu-master-documents">
+
+                                    <ul class="stack-submenu">
+
+                                        <li>
+                                            <a href="AddMasterDocuments.aspx">
+                                                Add Master Documents
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="AddDocumentNameAdmin.aspx">
+                                                Add Document Name (Admin)
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="AddDocumentNameEmployee.aspx">
+                                                Add Document Name (Employee)
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="MasterDocumentList.aspx">
+                                                Master Document List
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="AdminDocumentList.aspx">
+                                                Admin Document List
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="EmployeeDocumentList.aspx">
+                                                Employee Document List
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                                <!-- PROJECTS -->
+
+                                <div class="tab-pane fade"
+                                    id="menu-projects">
+
+                                    <ul class="stack-submenu">
+
+                                        <li>
+                                            <a href="Project.aspx">
+                                                Project
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="Task.aspx">
+                                                Task
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="TaskBoard.aspx">
+                                                Task Board
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                                <!-- REPORTS -->
+
+                                <div class="tab-pane fade"
+                                    id="menu-reports">
+
+                                    <ul class="stack-submenu">
+
+                                        <li>
+                                            <a href="EmployeeReport.aspx">
+                                                Employee Report
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="AttendanceReport.aspx">
+                                                Attendance Report
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="LeaveReport.aspx">
+                                                Leave Report
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="PaySlipReport.aspx">
+                                                PaySlip Report
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="ProjectReport.aspx">
+                                                Project Report
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="TaskReport.aspx">
+                                                Task Report
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="DailyReport.aspx">
+                                                Daily Report
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                                <!-- ATTENDANCE -->
+
+                                <div class="tab-pane fade"
+                                    id="menu-attendance">
+
+                                    <ul class="stack-submenu">
+
+                                        <li>
+                                            <a href="Leaves.aspx">
+                                                Leaves
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="AttendanceAdmin.aspx">
+                                                Attendance (Admin)
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="Timesheet.aspx">
+                                                Timesheet
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                                <!-- PAYROLL -->
+
+                                <div class="tab-pane fade"
+                                    id="menu-payroll">
+
+                                    <ul class="stack-submenu">
+
+                                        <li>
+                                            <a href="AddEmployeeSalary.aspx">
+                                                Add Employee Salary
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="MasterPayroll.aspx">
+                                                Master Payroll
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="EmployeeSalaryList.aspx">
+                                                Employee Salary List
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="GeneratePayslipMonthly.aspx">
+                                                Generate Payslip Monthly
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="TransactionHistory.aspx">
+                                                Transaction History
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                                <!-- HELP -->
+
+                                <div class="tab-pane fade"
+                                    id="menu-help">
+
+                                    <ul class="stack-submenu">
+
+                                        <li>
+                                            <a href="KnowledgeBase.aspx">
+                                                Knowledge Base
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="Activities.aspx">
+                                                Activities
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                                <!-- TICKETS -->
+
+                                <div class="tab-pane fade"
+                                    id="menu-tickets">
+
+                                    <ul class="stack-submenu">
+
+                                        <li>
+                                            <a href="Tickets.aspx">
+                                                Tickets
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="TicketDetails.aspx">
+                                                Ticket Details
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ========================================= -->
+                    <!-- LOGOUT -->
+                    <!-- ========================================= -->
+
+                    <div class="p-3">
+
+                        <asp:LinkButton
+                            ID="lnkLogout"
+                            runat="server"
+                            CssClass="d-flex align-items-center fs-12 text-danger"
+                            OnClick="lnkLogout_Click">
+
+                            <i class="ti ti-logout me-2"></i>
+
+                            Logout
+
+                        </asp:LinkButton>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ========================================= -->
+        <!-- PAGE CONTENT -->
+        <!-- ========================================= -->
+
+        <div class="page-wrapper">
+
+            <div class="content">
+
+                <asp:ContentPlaceHolder
+                    ID="MainContent"
+                    runat="server">
+                </asp:ContentPlaceHolder>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================================= -->
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/feather.min.js"></script>
+
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+
+    <script src="assets/js/theme-colorpicker.js"></script>
+
+    <script src="assets/js/script.js"></script>
+
+
+</form>
+
+</body>
+
+</html>
